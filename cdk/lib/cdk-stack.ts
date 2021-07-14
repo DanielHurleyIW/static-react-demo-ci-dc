@@ -28,7 +28,7 @@ export class CdkStack extends cdk.Stack {
       "Boundary",
       `arn:aws:iam::${process.env.AWS_ACCOUNT}:policy/ScopePermissions`
     )
-
+    
     iam.PermissionsBoundary.of(this).apply(boundary)
 
     // 4. outputs
